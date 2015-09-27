@@ -12,11 +12,12 @@ knit        : slidify::knit2slides
 ext_widgets : {rCharts: ["libraries/leaflet"]}
 ---
 
-## Read-And-Delete
+## Motivation
+   
++ In the last few years in Bogota, the land price has shown a significant increase due to the high demand.
++ Due to the high prices, people decide to rent apartments instead of buying them.
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+<iframe src="fig/map3.html" width=100%, height=600></iframe>
 
 --- .class #id 
 
