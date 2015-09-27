@@ -17,6 +17,7 @@ ext_widgets : {rCharts: ["libraries/leaflet"]}
 1. Edit YAML front matter
 2. Write using R Markdown
 3. Use an empty line followed by three dashes to separate slides!
+4. asdddd
 
 --- .class #id 
 
