@@ -29,14 +29,6 @@ ext_widgets : {rCharts: ["libraries/leaflet"]}
 
 
 
-```
-## 
-## Attaching package: 'readr'
-## 
-## The following object is masked from 'package:rCharts':
-## 
-##     read_file
-```
 
 
 ```r
@@ -76,7 +68,7 @@ ggplot(data=rentdata) +geom_boxplot(aes(y=price,x=neigh), fill="steel blue") +
 Using this app you can calculate the monthtly rent of your desired apartment in Bogota.
 It is powered by a machine learning algorithm to correctly predict the rent ([website](https://mabolivar.shinyapps.io/ShinyApp))
 
-
+<embed src= https://mabolivar.shinyapps.io/ShinyApp width=100% height=400> </embed>
 
 
 

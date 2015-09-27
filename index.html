@@ -74,14 +74,6 @@
 <li>Due to their high demand, only neighbourhoods located in the downtown were considered.</li>
 </ul>
 
-<pre><code>## 
-## Attaching package: &#39;readr&#39;
-## 
-## The following object is masked from &#39;package:rCharts&#39;:
-## 
-##     read_file
-</code></pre>
-
 <pre><code class="r">rentdata &lt;- rentdata[complete.cases(rentdata),]
 head(rentdata)
 </code></pre>
@@ -124,6 +116,8 @@ ggplot(data=rentdata) +geom_boxplot(aes(y=price,x=neigh), fill=&quot;steel blue&
   <article data-timings="">
     <p>Using this app you can calculate the monthtly rent of your desired apartment in Bogota.
 It is powered by a machine learning algorithm to correctly predict the rent (<a href="https://mabolivar.shinyapps.io/ShinyApp">website</a>)</p>
+
+<p><embed src= https://mabolivar.shinyapps.io/ShinyApp width=100% height=400> </embed></p>
 
   </article>
   <!-- Presenter Notes -->
