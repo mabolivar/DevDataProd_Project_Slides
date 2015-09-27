@@ -65,10 +65,66 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>The Data</h2>
   </hgroup>
   <article data-timings="">
-    
+    <ul>
+<li>The data of the  properties in rent was obtained from online classified ads of a local newspaper.</li>
+<li>The data was collected on September 23/2015 using <code>rvest</code> package and contains 1000 records of the last published ads.</li>
+<li>Due to their high demand, only neighbourhoods located in the downtown were considered.</li>
+</ul>
+
+<pre><code>## 
+## Attaching package: &#39;readr&#39;
+## 
+## The following object is masked from &#39;package:rCharts&#39;:
+## 
+##     read_file
+</code></pre>
+
+<pre><code class="r">rentdata &lt;- rentdata[complete.cases(rentdata),]
+head(rentdata)
+</code></pre>
+
+<pre><code>##       price  published     neigh area bathr rms
+## 3  466.6667 2015-08-30 CHAPINERO   58     2   2
+## 4  416.6667 2015-08-29 CHAPINERO   65     2   2
+## 5  350.0000 2015-08-29   SOLEDAD   33     1   1
+## 6  600.0000 2015-08-29 CHAPINERO   58     2   1
+## 7  900.0000 2015-08-29   ROSALES  100     2   2
+## 8 1233.3333 2015-08-29   ROSALES  140     3   3
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Average monthly rent</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The following figure presents a boxplot comparing the distribution of rent prices trough each different neighbourhood.</p>
+
+<pre><code class="r">library(ggplot2)
+ggplot(data=rentdata) +geom_boxplot(aes(y=price,x=neigh), fill=&quot;steel blue&quot;) +
+  ylab(&quot;Price (USD/month)&quot;)+ xlab(&quot;Neighbourhood&quot;)
+</code></pre>
+
+<p><img src="assets/fig/summary-1.png" alt="plot of chunk summary"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Shiny app</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using this app you can calculate the monthtly rent of your desired apartment in Bogota.
+It is powered by a machine learning algorithm to correctly predict the rent (<a href="https://mabolivar.shinyapps.io/ShinyApp">website</a>)</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -85,8 +141,20 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='The Data'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Average monthly rent'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Shiny app'>
+         4
       </a>
     </li>
   </ul>
