@@ -9,7 +9,6 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
-ext_widgets : {rCharts: ["libraries/leaflet"]}
 ---
 
 ## Read-And-Delete
@@ -17,7 +16,6 @@ ext_widgets : {rCharts: ["libraries/leaflet"]}
 1. Edit YAML front matter
 2. Write using R Markdown
 3. Use an empty line followed by three dashes to separate slides!
-4. asdddd
 
 --- .class #id 
 
